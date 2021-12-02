@@ -1,0 +1,261 @@
+
+/* UTILITIES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+body {
+    --color-primary: #009579;
+    --color-primary-dark: #007f67;
+    --color-secondary: #252c6a;
+    --color-error: #cc3333;
+    --color-success: #4bb544;
+    --border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+   }
+
+a {
+    text-decoration: none;
+   }
+li {
+    list-style: none;
+   }
+/* NAVBAR STYLING STARTS */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(228, 98, 11, 0.753);
+    color: #fff;
+   }
+   .nav-links a {
+    color: #fff;
+   }
+   /* LOGO */
+   .logo {
+    font-size: 32px;
+    font-family: 'Times New Roman', Times, serif;
+   }
+   /* NAVBAR MENU */
+   .menu {
+    display: flex;
+    font-size: 18px;
+    margin: auto;
+   }
+   .menu li:hover {
+    background-color: #b8b9b9;
+    border-radius: 5px;
+    transition: 0.3s ease;
+   }
+   .menu li {
+    margin: auto;
+    padding: 5px 14px;
+   }
+   /* DROPDOWN MENU */
+   .services {
+    position: relative; 
+    float: left;
+   }
+   .dropdown {
+    background-color: rgb(16, 156, 156);
+    position: absolute;
+    display: none;
+    right:0;
+    border-radius: 8px;
+    top: 35px;
+   }
+   .dropdown li + li {
+    margin-top: 20px;
+   }
+   .dropdown li {
+    padding: 0.5em 1em;
+    width: 8em;
+    text-align: center;
+   }
+   .dropdown li:hover {
+    background-color: #4c9e9e;
+   }
+   .services:hover .dropdown {
+    display: block;
+    float: left;
+   }
+/* Add a black background color to the top navigation */
+
+.container {
+    max-width: 400px;
+    margin: auto;
+    margin-top: 2rem;
+    padding: 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+    border-radius: var(--border-radius);
+    background: #ffffff;
+}
+
+.avatar{
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+}
+
+
+.container,
+.form__input,
+.form__button {
+    font: 500 1rem 'Quicksand', sans-serif;
+}
+
+.form--hidden {
+    display: none;
+}
+
+.form > *:first-child {
+    margin-top: 0;
+}
+
+.form > *:last-child {
+    margin-bottom: 0;
+}
+
+.form__title {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form__message {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form__message--success {
+    color: var(--color-success);
+}
+
+.form__message--error {
+    color: var(--color-error);
+}
+
+.form__input-group {
+    margin-bottom: 1rem;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    border-radius: var(--border-radius);
+    border: 1px solid #dddddd;
+    outline: none;
+    background: #eeeeee;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.form__input:focus {
+    border-color: var(--color-primary);
+    background: #ffffff;
+}
+
+.form__input--error {
+    color: var(--color-error);
+    border-color: var(--color-error);
+}
+
+.form__input-error-message {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--color-error);
+}
+
+.form__button {
+    width: 100%;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border: none;
+    border-radius: var(--border-radius);
+    outline: none;
+    cursor: pointer;
+    background: var(--color-primary);
+}
+
+.form__button:hover {
+    background: var(--color-primary-dark);
+}
+
+.form__button:active {
+    transform: scale(0.98);
+}
+
+.form__text {
+    text-align: center;
+    padding-top: 1em;
+
+}
+
+.form__link {
+    color: var(--color-secondary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form__link:hover {
+    text-decoration: underline;
+}
+
+.column {
+    float:left;
+    width: 25%;
+    padding: 10px;
+}
+
+.column > input[type="radio"]{
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+.column > input[type="radio"]:checked + img{
+    transform: scale(1.5);
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear:both;
+}
+
+.radio-gender{
+    margin: 10px;
+}
+
+.radio-gender input[type='radio']{
+    opacity:0;
+    position:fixed;
+    width: 0;
+}
+
+.radio-gender label{
+    display: inline-block;
+    background-color: #ddd;
+    padding: 10px 20px;
+    font-family: sans-serif, Arial, Helvetica;
+    font-size: 16px;
+    border: 2px solid #444; 
+    border-radius: 4px;
+}
+
+.radio-gender input:checked + label{
+    background-color: rgb(187, 255, 187);
+    border-color: #4c9e9e;
+}
+
+.radio-gender label:hover{
+    border: 2px dashed #dfd; 
+}
+
+.avatar--hidden{
+    display: none ;
+}

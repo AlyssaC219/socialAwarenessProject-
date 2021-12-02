@@ -1,25 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <div>
-            <h1>Log In/Create An Account</h1>
-            <div>
-                <form>
-                    <label for="username"> Username: </label><br>
-                    <input type="text" id="username" name="username"><br>
-                    <label for="pwd">Password:</label><br>
-                    <input type="text" id="pwd" name="pwd">
+<html lang='en'>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta charset="utf-8">
+        <title>Login/Sign Up Form</title>
+        <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="style.css" />
 
-                </form>
-            </div>
+
+    </head>
+    <body>
+        <nav class = "navbar">
+            <!-- Logo -->
+            <div class = 'logo'>Social Awareness</div>
+            <ul class="nav-links">
+                <!-- NAVIGATION MENUS -->
+                <div class = 'menu' id='navBar'>
+                    <li class="services" id='userLogo'>
+                        <a href="/">
+                            <img src="resource/avatars/avatar_default.png" id='avatar' class="avatar">
+                        </a>
+                        <!-- DROPDOWN MENU -->
+                        <ul class="dropdown">
+                        <li><a href="/">Dashboard </a></li>
+                        <li><a href="/">Account</a></li>
+                        <li><a href="/">Dropdown 2</a></li>
+                        <li><a href="/">Dropdown 3</a></li>
+                        <li><a href="/">Log Out</a></li>
+                    </ul>
+                    </li>
+                </div>
+            </ul> 
+        </nav>
+        <div class="container">
+            <!-- LOGIN -->
+            <form class="form" id="login">
+                <h1 class="form__title">Login</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" class="form__input" id="loginEmail" autofocus placeholder="Email">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" class="form__input" id="loginPassword" autofocus placeholder="Password">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit">Continue</button>
+                <p class="form__text">
+                    <a href="#" class="form__link" id='linkForgetPassword'>Forgot your password?</a>
+                </p>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkCreateAccount">Don't have an account? Create account</a>
+                </p>
+            </form>
+            <!-- Create Account -->
+            <form class="form form--hidden" id="createAccount">
+                <h1 class="form__title">Create Account</h1>
+                <div class="form__message form__message--error"></div>
+                <div class="form__input-group">
+                    <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="text" id = 'signupEmail' class="form__input" autofocus placeholder="Email Address">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" id='signupPassword' class="form__input" autofocus placeholder="Password" onkeyup="validate_password(this);">
+                    <div class="form__input-error-message"></div>
+                </div>
+                <div class="form__input-group">
+                    <input type="password" id='confirm_signupPassword' class="form__input" autofocus placeholder="Confirm password" onkeyup='confirm_password();'>
+                    <div class="form__input-error-message"></div>
+                </div>
+                <button class="form__button" type="submit" >Continue</button>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkLogin">Already have an account? Sign in</a>
+                </p>
+            </form>
+            <!-- Avatar Selection -->
+            <form class='form form--hidden' id='selectAvatar'>
+                <h1 class = "form__title">Select Avatar</h1>
+                <div class = "form__message form__message--error"></div>
+                <div class="radio-gender">
+                    <input type='radio' id='radio_maleAvatar' name ='gender' value='male' onclick="create_avatar(this)" />
+                    <label for = 'radio_maleAvatar'> Male </label>
+                    
+                    <input type='radio' id='radio_femaleAvatar' name ='gender' value='female' onclick="create_avatar(this)"/>
+                    <label for = 'radio_femaleAvatar'> Female </label>
+                </div>
+
+                <div class ='avatar--hidden' id='avatarTableMale' >
+                    <div class="row">
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar1" name="avatarRadio"/>
+                            <img for="radioAvatar1" src="resource/avatars/male/avatar_1.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar2" name="avatarRadio"/>
+                            <img for="radioAvatar2" src="resource/avatars/male/avatar_2.png"  style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar3" name="avatarRadio"/>
+                            <img for="radioAvatar3" src="resource/avatars/male/avatar_3.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar4" name="avatarRadio"/>
+                            <img for="radioAvatar4" src="resource/avatars/male/avatar_4.png" style="width: 100%"/>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar5" name="avatarRadio"/>
+                            <img for="radioAvatar5" src="resource/avatars/male/avatar_5.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar6" name="avatarRadio"/>
+                            <img for="radioAvatar6" src="resource/avatars/male/avatar_6.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar7" name="avatarRadio"/>
+                            <img for="radioAvatar7" src="resource/avatars/male/avatar_7.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar8" name="avatarRadio"/>
+                            <img for="radioAvatar8" src="resource/avatars/male/avatar_8.png" style="width: 100%"/>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar9" name="avatarRadio"/>
+                            <img for="radioAvatar9" src="resource/avatars/male/avatar_9.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar10" name="avatarRadio"/>
+                            <img for="radioAvatar10" src="resource/avatars/male/avatar_10.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar11" name="avatarRadio"/>
+                            <img for="radioAvatar11" src="resource/avatars/male/avatar_11.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar12" name="avatarRadio"/>
+                            <img for="radioAvatar12" src="resource/avatars/male/avatar_12.png" style="width: 100%"/>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar13" name="avatarRadio"/>
+                            <img for="radioAvatar13" src="resource/avatars/male/avatar_13.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar14" name="avatarRadio"/>
+                            <img for="radioAvatar14" src="resource/avatars/male/avatar_14.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar15" name="avatarRadio"/>
+                            <img for="radioAvatar15" src="resource/avatars/male/avatar_15.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="radioAvatar16" name="avatarRadio"/>
+                            <img for="radioAvatar16" src="resource/avatars/male/avatar_16.png" style="width: 100%"/>
+                        </label>
+                    </div>
+                </div>
+
+                <div class ='avatar--hidden' id='avatarTableFemale' >
+                    <div class="row">
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar1" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar1" src="resource/avatars/female/avatar_1.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar2" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar2" src="resource/avatars/female/avatar_2.png"  style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar3" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar3" src="resource/avatars/female/avatar_3.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar4" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar4" src="resource/avatars/female/avatar_4.png" style="width: 100%"/>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar5" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar5" src="resource/avatars/female/avatar_5.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar6" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar6" src="resource/avatars/female/avatar_6.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar7" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar7" src="resource/avatars/female/avatar_7.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar8" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar8" src="resource/avatars/female/avatar_8.png" style="width: 100%"/>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar9" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar9" src="resource/avatars/female/avatar_9.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar10" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar10" src="resource/avatars/female/avatar_10.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar11" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar11" src="resource/avatars/female/avatar_11.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar12" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar12" src="resource/avatars/female/avatar_12.png" style="width: 100%"/>
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar13" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar13" src="resource/avatars/female/avatar_13.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar14" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar14" src="resource/avatars/female/avatar_14.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar15" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar15" src="resource/avatars/female/avatar_15.png" style="width: 100%"/>
+                        </label>
+                        <label class='column'>
+                            <input type="radio" id="femaleRadioAvatar16" name="avatarRadio"/>
+                            <img for="femaleRadioAvatar16" src="resource/avatars/female/avatar_16.png" style="width: 100%"/>
+                        </label>
+                    </div>
+                </div>
+                    <button class="form__button" type="submit">Submit</button>
+            </form>
+            <!-- Forget Password -->
+            <form class="form form--hidden" id="forgetPassword">
+                <h1 class="form__title">Forgot Your Password?</h1>
+                <div class="form__message form__message--error"> There's nothing we could do. </div>
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkLoginFP">Back to Login</a>
+                </p>
+            </form>
         </div>
-    </div>
-</body>
+        
+        <script src="js/login.js"></script>
+    </body>
 </html>
