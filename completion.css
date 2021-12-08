@@ -4,18 +4,31 @@ html, body, #container {
     margin: 0;
 } 
 
+div {
+    color: white;
+  }
+
 #container {
     /* flex container */
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-
 }
 
 .card{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
     border: 1px white solid;
     padding: 100px;
     margin-bottom:65px;
+    border-radius: 60px;
     background-color: white;
 }
+
+i.fas, i.fab, i.far {
+      font-size: 100px; 
+      color: #FE2C55;
+    }
