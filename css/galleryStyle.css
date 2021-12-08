@@ -256,7 +256,7 @@ input[type="checkbox"] {
 }
 
 #galleryContainer .card:hover {
-  opacity: 90%;
+  opacity: 89%;
   cursor: pointer;
   box-shadow: 0px 0px 10px 0px #000000;
 }
