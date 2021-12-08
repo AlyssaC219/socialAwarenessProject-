@@ -52,7 +52,7 @@ function onTimeStampUpdate(event) {
       document.getElementById("radioItems").style.display = "none";
     } else if (currentTime === 252) {
       player.pauseVideo();
-      window.location.assign("completion.html");
+      window.location.href = "index.html";
     }
   }
 }
