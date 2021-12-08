@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="galleryStyle.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>social <span id="logoAccent">awareness</span></h1>
+    </header>
+    <div id="container">
+      <div id="filterArea" class="card">
+        <h2>To Do</h2>
+        <div class="filterGroup">
+          <h3>Completed</h3>
+          <ul id="myCompleted"></ul>
+          <button id="myRemoveButton">
+            Remove Selected Task(s) to Not Yet Completed
+          </button>
+        </div>
+        <div class="filterGroup">
+          <h3>Not Yet Completed</h3>
+          <ul id="notCompleted">
+            <li>
+              <input
+                name="mediaType"
+                type="checkbox"
+                id="type_cb1"
+                value="video"
+              /><label for="type_cb1">Relationship Skills</label>
+            </li>
+            <li>
+              <input
+                name="mediaType"
+                type="checkbox"
+                id="type_cb2"
+                value="document"
+              /><label for="type_cb2">Self-Awareness</label>
+            </li>
+            <li>
+              <input
+                name="mediaType"
+                type="checkbox"
+                id="type_cb1"
+                value="video"
+              /><label for="type_cb3">Self-Management</label>
+            </li>
+            <li>
+              <input
+                name="mediaType"
+                type="checkbox"
+                id="type_cb2"
+                value="document"
+              /><label for="type_cb4">Responsible Decision-Making</label>
+            </li>
+            <li>
+              <input
+                name="mediaType"
+                type="checkbox"
+                id="type_cb1"
+                value="video"
+              /><label for="type_cb5">Demonstrates Empathy</label>
+            </li>
+            <li>
+              <input
+                name="mediaType"
+                type="checkbox"
+                id="type_cb2"
+                value="document"
+              /><label for="type_cb6">Appreciates Diversity</label>
+            </li>
+          </ul>
+          <button id="myAddButton">Add Selected Task(s) to Completed</button>
+        </div>
+        <div class="filterGroup">
+          <h3>Your Notes</h3>
+          <ul id="myList">
+            <li>
+              <input
+                name="knowledge"
+                type="checkbox"
+                id="knowledge_cb1"
+                value="none"
+              /><label for="knowledge_cb1">Oy vey!</label>
+            </li>
+            <li>
+              <input
+                name="knowledge"
+                type="checkbox"
+                id="knowledge_cb2"
+                value="intermediate"
+              /><label for="knowledge_cb2">Oy vey.</label>
+            </li>
+            <li>
+              <input
+                name="knowledge"
+                type="checkbox"
+                id="knowledge_cb3"
+                value="advanced"
+              /><label for="knowledge_cb3">Oy vey?</label>
+            </li>
+          </ul>
+        </div>
+
+        <input id="messageTxt" type="text" placeholder="type something here" />
+        <button id="myButton">Add Note</button>
+
+        <button id="myDeleteButton">Remove Last Note</button>
+      </div>
+
+      <div id="gallery">
+        <div id="select"><h2>Select a Topic</h2></div>
+
+        <main id="galleryContainer">
+          <div id="relationshipCard" class="topicCards">
+            <div class="robotoWhite">
+              <h3>Relationship Skills</h3>
+            </div>
+          </div>
+
+          <div id="awarenessCard" class="topicCards">
+            <div class="robotoWhite">
+              <h3>Self-Awareness</h3>
+            </div>
+          </div>
+
+          <div id="managementCard" class="topicCards">
+            <div class="robotoWhite">
+              <h3>Self-Management</h3>
+            </div>
+          </div>
+
+          <div id="decisionMakingCard" class="topicCards">
+            <div class="robotoWhiteSpecial">
+              <h3>Responsible Decision-Making</h3>
+            </div>
+          </div>
+
+          <a href="intVideo.html"
+            ><div id="empathyCard" class="topicCards">
+              <div class="robotoWhiteSpecials">
+                <h3>Demonstrates Empathy</h3>
+              </div>
+            </div>
+          </a>
+
+          <div id="diversityCard" class="topicCards">
+            <div class="robotoWhiteSpecialsTwo">
+              <h3>Appreciates Diversity</h3>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
