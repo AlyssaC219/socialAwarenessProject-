@@ -14,8 +14,8 @@ html, body, #container {
 }
 
 .card{
-    border: 1px lightgrey solid;
-    padding: 10px;
-    margin-bottom:10px;
+    border: 1px white solid;
+    padding: 100px;
+    margin-bottom:65px;
     background-color: white;
 }
