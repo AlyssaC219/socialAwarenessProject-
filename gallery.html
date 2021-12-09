@@ -5,13 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gallery</title>
-    <link rel="stylesheet" href="css/galleryStyle.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/galleryStyle.css" />
+    <link rel="stylesheet" href="css/login.css" />
   </head>
   <body>
-    <header>
+    <!-- 
+    Edited by Alyssa: 
+    - Treating gallery.html as the 'main' page of our App
+    - Login page will lead to gallery page
+    - If gallery page does not detect any logged in user,
+      it will automatically redirect to login page.
+    -->
+    <!-- <header>
       <h1>social <span id="logoAccent">awareness</span></h1>
-    </header>
+    </header> -->
+    <nav class = "navbar">
+      <!-- Logo -->
+      <div class = 'logo'>social <span id="logoAccent">awareness</span></div>
+      <ul class="nav-links">
+          <!-- NAVIGATION MENUS -->
+          <div class = 'menu' id='navBar'>
+              <li class="services" id='userLogo'>
+                  <a href="/">
+                      <img src="resource/avatars/avatar_default.png" id='userAvatar' class="avatar">
+                  </a>
+                  <!-- DROPDOWN MENU -->
+                  <ul class="dropdown">
+                  <li><a href="/">Dashboard </a></li>
+                  <li><a href="/">Account</a></li>
+                  <li><a href="/">Dropdown 2</a></li>
+                  <li><a href="/">Dropdown 3</a></li>
+                  <li><a href="/">Log Out</a></li>
+              </ul>
+              </li>
+          </div>
+      </ul> 
+  </nav>
     <div id="container">
       <div id="filterArea" class="card">
         <h2>To Do</h2>
@@ -156,5 +186,6 @@
         </main>
       </div>
     </div>
+    <script src="js/gallery.js"></script>
   </body>
 </html>
