@@ -14,6 +14,7 @@ body {
     --border-radius: 4px;
     font-family: Arial, Helvetica, sans-serif;
     align-items: center;
+    background: #5E9ED6;
    }
 
 a {
@@ -28,7 +29,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: rgba(228, 98, 11, 0.753);
+    background-color: rgba(255, 255, 255);
     color: #fff;
    }
    .nav-links a {
@@ -37,7 +38,8 @@ li {
    /* LOGO */
    .logo {
     font-size: 32px;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Montserrat", Times, serif;
+    color: #ee5100;
    }
    /* NAVBAR MENU */
    .menu {
