@@ -174,7 +174,7 @@ button.outline {
   line-height: 40px;
   font-weight: 400;
   text-transform: capitalize;
-  margin-left: -10px;
+  margin-left: 0px;
 
   color: #ffffff;
 }
