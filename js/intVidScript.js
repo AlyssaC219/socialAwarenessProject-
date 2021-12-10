@@ -38,7 +38,7 @@ function onTimeStampUpdate(event) {
     let currentTime = Math.floor(player.getCurrentTime());
     /* console.log(currentTime); */
 
-    if (currentTime === 7) {
+    if (currentTime === 5) {
       player.pauseVideo();
 
       document.getElementById("questionText").innerText =
