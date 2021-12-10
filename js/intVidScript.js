@@ -46,7 +46,7 @@ function onTimeStampUpdate(event) {
 
       document.getElementById("radioItems").style.display = "block";
       document.getElementById("continueButton").style.visibility = "visible";
-    } else if (currentTime === 8) {
+    } else if (currentTime === 6) {
       document.getElementById("questionText").innerText = "";
       document.getElementById("continueButton").style.visibility = "hidden";
       document.getElementById("radioItems").style.display = "none";
