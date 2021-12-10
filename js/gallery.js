@@ -1,13 +1,26 @@
+/* Contributor: Alyssa Chen
+*/
+
+/** Contributor: Alyssa Chen
+ * retrieve locally stored JSON data and parse them into an array
+ * @param {*} name 
+ * @returns 
+ */
 function getLocalStorage(name){
     let name_array = JSON.parse(localStorage.getItem(name)) || [];
     return name_array;
 }
-
+/** Contributor: Alyssa Chen
+ * log the current user out by setting 'LoggedIn' to false
+ */
 function logout(){
     sessionStorage.setItem('LoggedIn', 'false');
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    /* 
+    Contributor: Alyssa Chen
+    */ 
     // check if users are logged in:
     var loginStatus = sessionStorage.getItem('LoggedIn');
     var storedUsers = getLocalStorage('Users');
@@ -17,10 +30,10 @@ document.addEventListener("DOMContentLoaded", () => {
         location.replace('login.html');
     }
     // User logged in, load content
-    // welcome message
-    welcomeMessage = document.getElementById('homeWelcome');
-    welcomeMessage.innerHTML = ('Welcome, '+loggedInUser.username);
     // set avatar
     userAvatar = document.getElementById('userAvatar')
     userAvatar.src = loggedInUser.avatar;
+
+    
 })
+

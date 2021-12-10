@@ -1,4 +1,6 @@
-
+/* 
+    Contributor: Alyssa Chen
+*/ 
 // ========================================================================
 //                          Useful Functions
 // ========================================================================
@@ -57,7 +59,7 @@ function checkExisingUsers(userArray, email){
 
 /**
  * Validate the password
- *      called within HTML
+ * - called within HTML
  * @param {DOMElement} password_elem 
  */
 function validate_password(password_elem){
@@ -71,7 +73,7 @@ function validate_password(password_elem){
 
 /**
  * Confirm two password entered matches
- *      called within HTML
+ * - called within HTML
  */
 function confirm_password(){
     let signupPassword = document.getElementById('signupPassword');
@@ -166,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (inputPassword === queryUsers[0].password){
                 sessionStorage.setItem('LoggedIn', queryUsers[0].email);
                 alert(queryUsers[0].username + ' logged in!');
-                window.location.replace('home.html');
+                window.location.replace('gallery.html');
             }
             else{
                 setFormMessage(loginForm, "error", "Invalid username/password combination");

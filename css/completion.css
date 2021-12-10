@@ -1,0 +1,50 @@
+html,
+body,
+#container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+body {
+  animation-name: example;
+  animation-duration: 5s;
+}
+
+@keyframes example {
+  from {
+    background-color: #fefbcc;
+  }
+  to {
+    background-color: #fe2c55;
+  }
+}
+
+div {
+  color: white;
+}
+
+#container {
+  /* flex container */
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 85px;
+    border-radius: 60px;
+    background-color: none;
+  }
+
+i.fas,
+i.fab,
+i.far {
+  font-size: 175px;
+  color: #fff;
+}
