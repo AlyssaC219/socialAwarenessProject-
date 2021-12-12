@@ -26,9 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     var storedUsers = getLocalStorage('Users');
     var loggedInUser = storedUsers.filter(obj => {return obj.email===loginStatus});
     var loggedInUser = loggedInUser[0];
-    if (loggedInUser == null){
+    /*if (loggedInUser == null){
         location.replace('login.html');
-    }
+    }*/
     // User logged in, load content
     // set avatar
     userAvatar = document.getElementById('userAvatar')
