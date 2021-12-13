@@ -1,8 +1,8 @@
 let pictures = ["social-awareness-picture-books.png", "youtube-screenshot.png"];
 
 let descriptions = [
-  "12312312, This is a description, This is a description, ",
-  "2nd description"
+  "Use these evidence-based social skills demonstrations to help you build your social behaviors and learn how their actions in the video affect others. With these demo examples, you can become more independent and maintain healthy relationships throughout your life. Please follow the examples from the video before you continue onto the next page. ",
+  "Check out these comments from the self-awareness video:"
 ];
 
 let nextPage = "Multiple Choice Task Video";
