@@ -1,11 +1,11 @@
-let pictures = ["social-awareness-picture-books.png", "2ndpicture.png"];
+let pictures = ["social-awareness-picture-books.png", "youtube-screenshot.png"];
 
 let descriptions = [
   "12312312, This is a description, This is a description, ",
   "2nd description"
 ];
 
-let nextPage = "#";
+let nextPage = "Multiple Choice Task Video";
 
 let rightSection = document.querySelector("#rightSection");
 for (let i = 0; i < pictures.length; i++) {
